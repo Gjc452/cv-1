@@ -8,6 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="html">111</div>
@@ -15,49 +16,7 @@
       <div id="div1"></div>
     </div>
     <style id="style"></style>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      #html {
-        word-break: break-all;
-      }
-      #div1 {
-        position: fixed;
-        right: 20px;
-        top: 20px;
-      }
-      #div1::before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      #div1::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      @media (max-width: 500px) {
-        #html {
-          height: 50vh;
-          overflow: auto;
-        }
-        #div1Wrapper {
-          height: 50vh;
-        }
-        #div1 {
-          position: relative;
-          top: 50px;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-    </style>
+
     <script src="main.js"></script>
   </body>
 </html>
