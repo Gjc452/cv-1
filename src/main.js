@@ -2,8 +2,7 @@ let html = document.querySelector("#html");
 let style = document.querySelector("#style");
 let string = `/*大家好，我是一名前端新人
 *接下来我演示一下我的前端功底
-*首先我要准备一个div
-*/
+*首先我要准备一个div*/
 #div1{
     border:1px solid red;
     width:300px;
@@ -52,6 +51,10 @@ let step = () => {
       string2 += "<br>";
     } else if (string[n] === " ") {
       string2 += "&nbsp";
+    } else if (string[n] === "/") {
+      string2 += "";
+    } else if (string[n] === "*") {
+      string2 += "";
     } else {
       string2 += string[n];
     }

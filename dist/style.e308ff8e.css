@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 #html {
+  padding: 10px;
   word-break: break-all;
 }
 #div1 {
@@ -27,6 +28,7 @@
 }
 @media (max-width: 500px) {
   #html {
+    padding: 5px;
     height: 50vh;
     overflow: auto;
   }

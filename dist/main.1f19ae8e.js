@@ -120,7 +120,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"main.js":[function(require,module,exports) {
 var html = document.querySelector("#html");
 var style = document.querySelector("#style");
-var string = "/*\u5927\u5BB6\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\n*\u63A5\u4E0B\u6765\u6211\u6F14\u793A\u4E00\u4E0B\u6211\u7684\u524D\u7AEF\u529F\u5E95\n*\u9996\u5148\u6211\u8981\u51C6\u5907\u4E00\u4E2Adiv\n*/\n#div1{\n    border:1px solid red;\n    width:300px;\n    height:300px;\n}\n/*\u63A5\u4E0B\u6765\u6211\u628Adiv\u53D8\u6210\u4E00\u4E2A\u516B\u5366\u56FE\n*\u6CE8\u610F\u770B\u597D\u4E86\n*\u9996\u5148\u628Adiv\u53D8\u6210\u4E00\u4E2A\u5706\u5708*/\n#div1{\n   border-radius:50%;\n   box-shadow: 0 0 3px rgba(0,0,0,0.5);\n    border:none;\n}\n/*\u7136\u540E\u628Adiv\u53D8\u6210\u9634\u9633\u76F8\u95F4*/\n#div1{\n    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);\n}\n/*\u63A5\u4E0B\u6765\u7ED9div\u52A0\u4E24\u4E2A\u98CE\u706B\u8F6E*/\n#div1::before{\n    width:150px;\n    height:150px;\n    border-radius:50%;\n    background:black;\n}\n#div1::after{\n  width:150px;\n  height:150px;\n  border-radius:50%;\n  background:white;\n}\n/*\u6700\u540E\u753B\u9F99\u70B9\u775B\n*\u5C31\u53D8\u6210\u4E86\u4E00\u4E2A\u516B\u5366*/\n#div1::before{\n    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%);\n}\n#div1::after{\n    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%);\n}";
+var string = "/*\u5927\u5BB6\u597D\uFF0C\u6211\u662F\u4E00\u540D\u524D\u7AEF\u65B0\u4EBA\n*\u63A5\u4E0B\u6765\u6211\u6F14\u793A\u4E00\u4E0B\u6211\u7684\u524D\u7AEF\u529F\u5E95\n*\u9996\u5148\u6211\u8981\u51C6\u5907\u4E00\u4E2Adiv*/\n#div1{\n    border:1px solid red;\n    width:300px;\n    height:300px;\n}\n/*\u63A5\u4E0B\u6765\u6211\u628Adiv\u53D8\u6210\u4E00\u4E2A\u516B\u5366\u56FE\n*\u6CE8\u610F\u770B\u597D\u4E86\n*\u9996\u5148\u628Adiv\u53D8\u6210\u4E00\u4E2A\u5706\u5708*/\n#div1{\n   border-radius:50%;\n   box-shadow: 0 0 3px rgba(0,0,0,0.5);\n    border:none;\n}\n/*\u7136\u540E\u628Adiv\u53D8\u6210\u9634\u9633\u76F8\u95F4*/\n#div1{\n    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 100%);\n}\n/*\u63A5\u4E0B\u6765\u7ED9div\u52A0\u4E24\u4E2A\u98CE\u706B\u8F6E*/\n#div1::before{\n    width:150px;\n    height:150px;\n    border-radius:50%;\n    background:black;\n}\n#div1::after{\n  width:150px;\n  height:150px;\n  border-radius:50%;\n  background:white;\n}\n/*\u6700\u540E\u753B\u9F99\u70B9\u775B\n*\u5C31\u53D8\u6210\u4E86\u4E00\u4E2A\u516B\u5366*/\n#div1::before{\n    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 25%, rgba(0,0,0,1) 25%);\n}\n#div1::after{\n    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%);\n}";
 var string2 = "";
 var n = -1;
 
@@ -132,6 +132,10 @@ var step = function step() {
       string2 += "<br>";
     } else if (string[n] === " ") {
       string2 += "&nbsp";
+    } else if (string[n] === "/") {
+      string2 += "";
+    } else if (string[n] === "*") {
+      string2 += "";
     } else {
       string2 += string[n];
     }
